@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.min.css" />
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.3.1.min.js"></script>
+
+<style type="text/css">
+	.home_title {background-color:#999;}
+	.list_img {margin:0 auto;
+	width:100px;
+	height:100px;}
+</style>
+
+<title>问元芳</title>
+</head>
+	
+<body>
+	<!--主页-->
+    <div data-role="page" id="home" data-title="问元芳">
+        <div data-role="header" data-position="fixed">
+            <h1>问元芳</h1>
+        </div>
+        <div data-role="content">
+        	<div class="home_title" align="center">
+            	<img src="img/title.png" />
+            </div>
+            <a href="#service" data-role="button">服务</a>
+            <a href="#function" data-role="button">具体功能</a>
+            <a href="#about" data-role="button">关于我们</a>
+        </div>
+    </div>
+    
+    <!--服务-->
+    <div data-role="page" id="service" data-title="服务" >
+    	<div data-role="header" data-position="fixed">
+            <h1>服务</h1>
+            <a href="#home" data-icon="back">后退</a>
+        </div>
+        <div data-role="content">
+            <p>问元芳是一个微信公共账号，关注她为你提供全方面服务。</p>
+            <ul data-role="listview" data-inset="true" data-icon="false" >
+            	<li>
+                   	<a href="#">
+                       	<img src="img/icon_service_lbs.png" />
+                        	<h1>基于位置的服务</h1>
+                            <p style="white-space:normal">提供周边搜索、公交线路、路线搜索和团购服务</p>
+                    </a>
+                </li>
+            </ul>
+            <ul data-role="listview" data-inset="true" data-icon="false">
+            	<li>
+                   	<a href="#">
+                       	<img src="img/icon_service_search.png" />
+                        	<h1>便民服务</h1>
+                            <p style="white-space:normal">提供天气、归属地、翻译等的查找，提供二维码生成服务</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!--功能-->
+    <div data-role="page" id="function" data-title="功能" data-auto-back-btn="true">
+    	<div data-role="header" data-position="fixed">
+            <h1>具体功能</h1>
+            <a href="#home" data-icon="back">后退</a>
+        </div>
+        <div data-role="content">
+            <p>您可以看到我们能具体做些什么。</p>
+            <ul data-role="listview" data-inset="true"  data-icon="false" >
+            	<li data-role="list-divider">基于位置服务</li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_location.png" class="list_img"/>
+                                <h1>周边查询</h1>
+                                <p style="white-space:normal">发送zb或者“周边”加上查询的内容，如“周边美食”或者“zb美食”，之后上传位置即可</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_groupon.png" />
+                                <h1>团购查询</h1>
+                                <p style="white-space:normal">发送“团购”或者“tg”加上信息，如“团购美食”或者“tg没事”，之后上传位置即可</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_driving.png" />
+                                <h1>线路查询</h1>
+                                <p style="white-space:normal">发送“到”或者“lx”加上目的地，如“到钟楼”或者“lx钟楼”，之后上传位置即可</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_bus.png" />
+                                <h1>公交查询</h1>
+                                <p style="white-space:normal">发送“公交”或者“gj”加上公交车号码，如“公交916”或者“gj916”，之后上传位置即可</p>
+                        </a>
+                    </li>
+                </li>
+            </ul>
+            <ul data-role="listview" data-inset="true"  data-icon="false">
+            	<li data-role="list-divider">便民查询服务</li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_weather.png" />
+                                <h1>天气查询</h1>
+                                <p style="white-space:normal">直接发送城市名或拼音</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_trans.png" />
+                                <h1>翻译查询</h1>
+                                <p style="white-space:normal">发送“@”加上要翻译的内容，就可以得到翻译结果</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_today.png" />
+                                <h1>历史上的今天</h1>
+                                <p style="white-space:normal">发送“今天”或者某一天的日期，如“2013-5-21”，就可以查看历史上今天发生的大事</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_place.png" />
+                                <h1>归属地查询</h1>
+                                <p style="white-space:normal">直接发送手机号码或者IP地址即可查询归属地，发送车牌号码前省份简称和字母即可查询车牌所在。发送关键字，就可以查询有关的电话</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/icon_qrcode.png" />
+                                <h1>二维码查询</h1>
+                                <p style="white-space:normal">发送“#1”加上内容生成普通二维码，先发送图片，再发送“#2”加上内容生成带自定义图片的二维码</p>
+                        </a>
+                    </li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!--关于-->
+    <div data-role="page" id="about" data-title="关于问元芳">
+    	<div data-role="header" data-position="fixed">
+            <h1>关于问元芳</h1>
+            <a href="#home" data-icon="back">后退</a>
+        </div>
+        <div data-role="content">
+        	<div>
+            	<img src="img/qr.jpg" />
+        	<p>西安电子科技大学 320LAB团队</p>
+            <p>联系方式：</p>
+            <p>以无坚不摧的信念，铸就卓尔不群的成功。</p>
+			<p>神说要有光，于是便有了光，神说光是好的，于是光和暗便分开了</p>
+        </div>
+    </div>
+</body>
+</html>
