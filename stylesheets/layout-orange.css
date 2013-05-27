@@ -30,6 +30,15 @@
 	box-shadow: 0px 0px 3px 1px #484848;
 }
 
+.css_phoneversion {
+	position: fixed;
+	z-index: 1000;
+	width: 190px;
+	height: 60px;
+	top: 220px;
+	left: 0;
+}
+
 .css_switcher img {
 	margin: 7px 0 0 6px;
 	text-align: center;
