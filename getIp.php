@@ -44,4 +44,36 @@ return $data;
 }
 
 $ip=getIP();
-echo $ip;
+//echo $ip;
+//echo $_SERVER['HTTP_USER_AGENT'];
+//echo $_SERVER['REMOTE_ADDR'];
+//echo $_SERVER['REMOTE_HOST'];
+
+$sheng="";
+$city="";
+
+if($ip !=null && $ip !=""){
+	if(strpos($ip,':')){
+		$ip = substr($ip,0,strpos($ip,':'));
+	}
+	$addr = getCity($ip);
+	if($addr){
+		$sheng = $addr['region'];
+		$city = $addr['city'];
+	}
+
+	$fp = fopen("files/logtrace.txt",'a');
+	fwrite($fp, $ip . " ". $_SERVER['HTTP_USER_AGENT'] . $sheng . $city . "\r\n");
+	fclose($fp);
+}
+
+
+
+	//$addr = getCity("123.138.79.29");
+	//if($addr){
+		//foreach ($addr as $key=>$value){
+		//	echo $key." - ".$value."<br/>";
+		//}
+	//	echo $addr['region'];
+	//	echo $addr['city'];
+	//}

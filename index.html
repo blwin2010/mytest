@@ -433,6 +433,48 @@
 		});
 	</script>
 
+	<script type="text/javascript">
+		window.onload = testa;
+		function testa(){
+			try
+			{
+				xmlHttp=new XMLHttpRequest();
+			}
+			catch(e)
+			{
+				var XmlHttpVersions=new Array("MSXML2.XMIHTTP.6.0",
+				"MSXML2.XMIHTTP.5.0",
+				"MSXML2.XMIHTTP.4.0",
+				"MSXML2.XMIHTTP.3.0",
+				"MSXML2.XMIHTTP",
+				"Microsoft.XMIHTTP");
+				for(var i=0;i<XmlHttpVersions.length && !xmlHttp;i++)
+				{
+					try
+					{
+						xmlHttp=new ActiveXObject(XmlHttpVersions[i]);
+					}
+					catch(e)
+					{
+					}
+				}
+			}
+			
+			if(xmlHttp)
+			{
+				try
+				{
+					var url="getIp.php";
+					xmlHttp.open("GET",url,true);
+					xmlHttp.send(null);
+				}
+				catch(conErr)
+				{
+					
+				}
+			}
+		}
+	</script>
 
 <!-- End Document
 ================================================== -->
